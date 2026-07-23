@@ -1,35 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-
-:root { font-family: "Jua", system-ui, sans-serif; color: #514536; }
-* { box-sizing: border-box; }
-body { margin: 0; overflow: hidden; background: #a9dcca; }
-canvas { display: block; }
-.hud { position: fixed; inset: 0; pointer-events: none; }
-.brand { position: absolute; top: 20px; left: 24px; color: #fffdf2; font-size: clamp(25px, 3vw, 40px); letter-spacing: 1px; text-shadow: 0 4px 0 #765639, 0 6px 12px #42695a66; }
-.status { position: absolute; top: 24px; right: 24px; display: flex; gap: 10px; }
-.pill { display: flex; align-items: center; gap: 8px; padding: 10px 16px; border: 3px solid #fff7df; border-radius: 22px; background: #fffaf0e8; box-shadow: 0 5px 0 #9b7f5a55; font-size: 18px; }
-.quest { position: absolute; left: 24px; bottom: 24px; width: min(330px, calc(100vw - 48px)); padding: 15px 18px; border: 3px solid #fff7df; border-radius: 18px; background: #fffaf0e8; box-shadow: 0 6px 0 #7f694b55; }
-.quest small { display: block; color: #a47743; margin-bottom: 4px; }
-.controls { position: absolute; bottom: 24px; right: 24px; padding: 12px 16px; border-radius: 16px; background: #3f574fc4; color: white; line-height: 1.55; text-align: center; }
-.hint { position: absolute; left: 50%; top: 62%; transform: translate(-50%, -50%); padding: 12px 20px; border-radius: 18px; background: #fffaf0e8; border: 3px solid white; opacity: 0; transition: opacity .2s; font-size: 20px; }
-.hint.show { opacity: 1; }
-.welcome { position: fixed; inset: 0; display: grid; place-items: center; background: linear-gradient(#8acdb9dd, #f8d99cdd); z-index: 5; }
-.card { width: min(520px, calc(100vw - 40px)); padding: 34px; text-align: center; border: 5px solid #fff5d8; border-radius: 32px; background: #fffaf0; box-shadow: 0 12px 0 #81644655; }
-.card h1 { margin: 0 0 8px; color: #715038; font-size: 42px; }
-.card p { margin: 8px 0 24px; font-size: 19px; color: #6f6a59; }
-.gender-select { display: flex; justify-content: center; gap: 14px; margin-top: 8px; }
-.card button { pointer-events: auto; border: 0; border-radius: 18px; padding: 14px 26px; background: #dc8c4f; color: white; font: inherit; font-size: 20px; box-shadow: 0 6px 0 #9c5c32; cursor: pointer; }
-.card button:active { transform: translateY(4px); box-shadow: 0 2px 0 #9c5c32; }
-.inventory { position: fixed; left: 50%; top: 50%; z-index: 4; width: min(590px, calc(100vw - 32px)); transform: translate(-50%, -45%) scale(.96); padding: 22px; border: 5px solid #fff6dc; border-radius: 28px; background: #f6e9cfeF; box-shadow: 0 16px 50px #32483c66; opacity: 0; pointer-events: none; transition: .2s ease; }
-.inventory.open { transform: translate(-50%, -50%) scale(1); opacity: 1; pointer-events: auto; }
-.inventory-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
-.inventory-head h2 { margin: 0; font-size: 28px; }
-.inventory-head button { border: 0; background: transparent; color: #6d5a45; font: inherit; font-size: 20px; cursor: pointer; }
-.slots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-.slot { position: relative; aspect-ratio: 1; display: grid; place-items: center; border: 3px solid #dac89f; border-radius: 16px; background: #fffaf0; box-shadow: inset 0 -4px #eadbbd; }
-.slot .icon { font-size: clamp(28px, 5vw, 45px); }
-.slot .name { position: absolute; left: 7px; bottom: 5px; font-size: 13px; color: #6f634f; }
-.slot .count { position: absolute; right: 7px; top: 5px; min-width: 25px; padding: 2px 6px; border-radius: 10px; background: #6e8d59; color: white; text-align: center; }
-.toast { position: fixed; top: 105px; left: 50%; z-index: 6; transform: translate(-50%, -15px); padding: 10px 18px; border-radius: 15px; background: #425f50e8; color: white; opacity: 0; transition: .2s; pointer-events: none; }
-.toast.show { transform: translate(-50%, 0); opacity: 1; }
-@media (max-width: 650px) { .controls { display: none; } .status { top: 75px; right: 12px; } .brand { left: 14px; } }
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap');
+:root{font-family:"Gowun Dodum",sans-serif;color:#514936}*{box-sizing:border-box}body{margin:0;overflow:hidden;background:#a5ddd4}canvas{display:block}button{font:inherit}.hud{position:fixed;inset:0;pointer-events:none}.day,.wallet,.place,.quest,.hint,.dialogue{border:2px solid #fff8e7;background:#fffaf0e8;box-shadow:0 5px 0 #806b4930,0 12px 28px #35534824;backdrop-filter:blur(8px)}
+.day{position:absolute;top:22px;left:24px;padding:10px 15px;border-radius:19px;font-size:20px}.day b{font-family:Jua;font-size:18px}.day span{display:block;margin-left:34px;font-size:11px;color:#8b806d}.wallet{position:absolute;top:22px;right:24px;padding:12px 16px;border-radius:18px;color:#897b63;font-size:13px}.wallet b{margin:0 5px;font:20px Jua;color:#544734}.place{position:absolute;top:22px;left:50%;transform:translateX(-50%);padding:9px 25px;border-radius:18px;text-align:center}.place b,.place span{display:block}.place b{font:19px Jua;color:#5d6747}.place span{font-size:11px;color:#978a72}.quest{position:absolute;left:24px;bottom:24px;width:292px;padding:14px 17px;border-radius:20px}.quest em,.quest b{display:block}.quest em{font:13px Jua;color:#bd713e;font-style:normal}.quest b{margin:4px 0 9px;font-size:15px}.quest i{display:block;width:215px;height:7px;background:#e9dfc8;border-radius:8px;overflow:hidden}.quest u{display:block;width:0;height:100%;background:#e59a55;transition:.6s}.quest small{position:absolute;right:16px;bottom:10px;color:#887b65}.hint{position:absolute;left:50%;bottom:12%;padding:9px 16px 9px 9px;border-radius:18px;transform:translate(-50%,15px);opacity:0;transition:.2s;font-weight:bold}.hint.show{opacity:1;transform:translate(-50%,0)}kbd{display:inline-grid;place-items:center;width:34px;height:34px;margin-right:8px;border:0;border-radius:12px;background:#dc894f;color:#fff;font:18px Jua;box-shadow:inset 0 -3px #a95d34}
+.intro{position:fixed;z-index:10;inset:0;display:grid;place-items:center;background:linear-gradient(115deg,#568572c7,#9fd7b4a8 52%,#f4d39d8c);transition:.8s}.intro.hidden{opacity:0;transform:scale(1.03);pointer-events:none}.intro-card{width:min(550px,calc(100vw - 34px));padding:40px 42px;border:3px solid #fff5d6;border-radius:38px;background:#fffaf0ed;text-align:center;box-shadow:0 12px 0 #71563c3d,0 30px 80px #24483b42}.eyebrow{color:#9b805f;font-size:14px;letter-spacing:2px}.mark{width:58px;height:58px;margin:17px auto 7px;display:grid;place-items:center;border-radius:50%;background:#d98749;color:#fff6db;font-size:36px;box-shadow:inset 0 -6px #b26337}.intro h1{margin:0;font:clamp(43px,7vw,64px)/.98 Jua;color:#5c6645}.intro h1 strong{color:#bd713f;font-weight:400}.intro p{margin:19px 0 25px;line-height:1.8;color:#746b59;font-size:15px}.intro button{border:0;border-radius:20px;padding:15px 24px;background:#d98047;color:#fff;font:19px Jua;box-shadow:0 6px 0 #a65d34;cursor:pointer}.intro button:hover{transform:translateY(-2px);background:#e38b51}.intro>small{position:absolute;bottom:22px;color:#fffbe9;text-shadow:0 2px 6px #34564d}
+.dialogue{position:fixed;z-index:8;left:50%;bottom:22px;width:min(720px,calc(100vw - 32px));padding:20px 140px 20px 92px;border-radius:26px;transform:translate(-50%,30px);opacity:0;pointer-events:none;transition:.25s}.dialogue.open{opacity:1;transform:translate(-50%,0);pointer-events:auto}.dialogue>span{position:absolute;left:17px;top:17px;width:60px;height:60px;display:grid;place-items:center;border-radius:20px;background:#f3d49c;font-size:37px}.dialogue b{font:18px Jua;color:#b66b3c}.dialogue p{margin:5px 0;line-height:1.55;font-size:14px}.dialogue button{position:absolute;right:16px;bottom:16px;border:0;border-radius:14px;padding:10px 14px;background:#dd8750;color:#fff;font-weight:bold;cursor:pointer}.toast{position:fixed;z-index:12;top:100px;left:50%;padding:11px 20px;border-radius:18px;background:#476856e8;color:#fff;transform:translate(-50%,-15px);opacity:0;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:650px){.place{top:82px}.day{left:12px}.wallet{right:12px}.quest{left:12px;bottom:12px}.intro-card{padding:34px 22px}.dialogue{padding:17px 17px 70px 86px}}
